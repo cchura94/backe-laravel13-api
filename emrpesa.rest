@@ -1,0 +1,47 @@
+@baseUrl = http://127.0.0.1:8000/api
+
+### Listar empresas
+GET {{baseUrl}}/empresa
+Accept: application/json
+
+###
+
+### Registrar empresa
+POST {{baseUrl}}/empresa
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Empresa ABC",
+    "logo": "logo.png",
+    "direccion": "Av. Principal #123",
+    "telefono": "77777777",
+    "horarios": "Lunes a Viernes 08:00 - 18:00"
+}
+
+###
+
+### Mostrar empresa por ID
+GET {{baseUrl}}/empresa/2
+Accept: application/json
+
+###
+
+### Actualizar empresa
+PUT {{baseUrl}}/empresa/2
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Empresa ABC Actualizada",
+    "logo": "logo2.png",
+    "direccion": "Av. Siempre Viva 742",
+    "telefono": "78945612",
+    "horarios": "Lunes a Sábado 08:00 - 20:00"
+}
+
+###
+
+### Eliminar empresa
+DELETE {{baseUrl}}/empresa/2
+Accept: application/json
